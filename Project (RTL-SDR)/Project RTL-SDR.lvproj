@@ -1,7 +1,10 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
 <Project Type="Project" LVVersion="15008000">
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
-	<Property Name="NI.Project.Description" Type="Str"></Property>
+	<Property Name="NI.Project.Description" Type="Str">Created IvanLis by LabVIEW Portal
+Profile: http://labviewportal.org/memberlist.php?mode=viewprofile&amp;u=987
+eMail: IvanLisanov@gMail.com
+Telegram: https://t.me/IvanLis</Property>
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
@@ -16,6 +19,10 @@
 			<Item Name="Example FFT.vi" Type="VI" URL="../Example/Example FFT.vi"/>
 			<Item Name="Search Device.vi" Type="VI" URL="../Example/Search Device.vi"/>
 			<Item Name="Templates RTL-SDR.png" Type="Document" URL="../Templates RTL-SDR.png"/>
+		</Item>
+		<Item Name="Test" Type="Folder">
+			<Item Name="Test EEPROM.vi" Type="VI" URL="../Test/Test EEPROM.vi"/>
+			<Item Name="Test Tuner Type.vi" Type="VI" URL="../Test/Test Tuner Type.vi"/>
 		</Item>
 		<Item Name="RTL-SDR.lvclass" Type="LVClass" URL="../RTL-SDR Class/RTL-SDR.lvclass"/>
 		<Item Name="Dependencies" Type="Dependencies">

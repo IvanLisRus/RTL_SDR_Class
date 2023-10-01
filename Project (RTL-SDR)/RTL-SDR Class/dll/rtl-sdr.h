@@ -150,7 +150,7 @@ typedef struct rtlsdr_dev rtlsdr_dev_t;
  * \param dev the device handle given by rtlsdr_open()
  * \return 0 on error, frequency in Hz otherwise
  */
-RTLSDR_API uint32_t rtlsdr_get_center_freq(rtlsdr_dev_t *dev);
++++ RTLSDR_API uint32_t rtlsdr_get_center_freq(rtlsdr_dev_t *dev);
 
 /*!
  * Set the frequency correction value for the device.
@@ -159,7 +159,7 @@ RTLSDR_API uint32_t rtlsdr_get_center_freq(rtlsdr_dev_t *dev);
  * \param ppm correction value in parts per million (ppm)
  * \return 0 on success
  */
-RTLSDR_API int rtlsdr_set_freq_correction(rtlsdr_dev_t *dev, int ppm);
++++ RTLSDR_API int rtlsdr_set_freq_correction(rtlsdr_dev_t *dev, int ppm);
 
 /*!
  * Get actual frequency correction value of the device.
@@ -167,7 +167,7 @@ RTLSDR_API int rtlsdr_set_freq_correction(rtlsdr_dev_t *dev, int ppm);
  * \param dev the device handle given by rtlsdr_open()
  * \return correction value in parts per million (ppm)
  */
-RTLSDR_API int rtlsdr_get_freq_correction(rtlsdr_dev_t *dev);
++++ RTLSDR_API int rtlsdr_get_freq_correction(rtlsdr_dev_t *dev);
 
 enum rtlsdr_tuner {
 	RTLSDR_TUNER_UNKNOWN = 0,
@@ -185,7 +185,7 @@ enum rtlsdr_tuner {
  * \param dev the device handle given by rtlsdr_open()
  * \return RTLSDR_TUNER_UNKNOWN on error, tuner type otherwise
  */
-RTLSDR_API enum rtlsdr_tuner rtlsdr_get_tuner_type(rtlsdr_dev_t *dev);
+--- RTLSDR_API enum rtlsdr_tuner rtlsdr_get_tuner_type(rtlsdr_dev_t *dev);
 
 /*!
  * Get a list of gains supported by the tuner.
@@ -197,7 +197,7 @@ RTLSDR_API enum rtlsdr_tuner rtlsdr_get_tuner_type(rtlsdr_dev_t *dev);
  * \param gains array of gain values. In tenths of a dB, 115 means 11.5 dB.
  * \return <= 0 on error, number of available (returned) gain values otherwise
  */
-RTLSDR_API int rtlsdr_get_tuner_gains(rtlsdr_dev_t *dev, int *gains);
++++ RTLSDR_API int rtlsdr_get_tuner_gains(rtlsdr_dev_t *dev, int *gains);
 
 /*!
  * Set the gain for the device.
@@ -213,7 +213,7 @@ RTLSDR_API int rtlsdr_get_tuner_gains(rtlsdr_dev_t *dev, int *gains);
  * \param gain in tenths of a dB, 115 means 11.5 dB.
  * \return 0 on success
  */
-RTLSDR_API int rtlsdr_set_tuner_gain(rtlsdr_dev_t *dev, int gain);
++++ RTLSDR_API int rtlsdr_set_tuner_gain(rtlsdr_dev_t *dev, int gain);
 
 /*!
  * Set the bandwidth for the device.
@@ -222,7 +222,7 @@ RTLSDR_API int rtlsdr_set_tuner_gain(rtlsdr_dev_t *dev, int gain);
  * \param bw bandwidth in Hz. Zero means automatic BW selection.
  * \return 0 on success
  */
-RTLSDR_API int rtlsdr_set_tuner_bandwidth(rtlsdr_dev_t *dev, uint32_t bw);
+--- RTLSDR_API int rtlsdr_set_tuner_bandwidth(rtlsdr_dev_t *dev, uint32_t bw);
 
 /*!
  * Get actual gain the device is configured to.
@@ -230,7 +230,7 @@ RTLSDR_API int rtlsdr_set_tuner_bandwidth(rtlsdr_dev_t *dev, uint32_t bw);
  * \param dev the device handle given by rtlsdr_open()
  * \return 0 on error, gain in tenths of a dB, 115 means 11.5 dB.
  */
-RTLSDR_API int rtlsdr_get_tuner_gain(rtlsdr_dev_t *dev);
++++ RTLSDR_API int rtlsdr_get_tuner_gain(rtlsdr_dev_t *dev);
 
 /*!
  * Set the intermediate frequency gain for the device.
@@ -240,7 +240,7 @@ RTLSDR_API int rtlsdr_get_tuner_gain(rtlsdr_dev_t *dev);
  * \param gain in tenths of a dB, -30 means -3.0 dB.
  * \return 0 on success
  */
-RTLSDR_API int rtlsdr_set_tuner_if_gain(rtlsdr_dev_t *dev, int stage, int gain);
++++ RTLSDR_API int rtlsdr_set_tuner_if_gain(rtlsdr_dev_t *dev, int stage, int gain);
 
 /*!
  * Set the gain mode (automatic/manual) for the device.
@@ -250,7 +250,7 @@ RTLSDR_API int rtlsdr_set_tuner_if_gain(rtlsdr_dev_t *dev, int stage, int gain);
  * \param manual gain mode, 1 means manual gain mode shall be enabled.
  * \return 0 on success
  */
-RTLSDR_API int rtlsdr_set_tuner_gain_mode(rtlsdr_dev_t *dev, int manual);
++++ RTLSDR_API int rtlsdr_set_tuner_gain_mode(rtlsdr_dev_t *dev, int manual);
 
 /*!
  * Set the sample rate for the device, also selects the baseband filters
@@ -263,7 +263,7 @@ RTLSDR_API int rtlsdr_set_tuner_gain_mode(rtlsdr_dev_t *dev, int manual);
  * 		    sample loss is to be expected for rates > 2400000
  * \return 0 on success, -EINVAL on invalid rate
  */
-RTLSDR_API int rtlsdr_set_sample_rate(rtlsdr_dev_t *dev, uint32_t rate);
++++ RTLSDR_API int rtlsdr_set_sample_rate(rtlsdr_dev_t *dev, uint32_t rate);
 
 /*!
  * Get actual sample rate the device is configured to.
@@ -271,7 +271,7 @@ RTLSDR_API int rtlsdr_set_sample_rate(rtlsdr_dev_t *dev, uint32_t rate);
  * \param dev the device handle given by rtlsdr_open()
  * \return 0 on error, sample rate in Hz otherwise
  */
-RTLSDR_API uint32_t rtlsdr_get_sample_rate(rtlsdr_dev_t *dev);
++++ RTLSDR_API uint32_t rtlsdr_get_sample_rate(rtlsdr_dev_t *dev);
 
 /*!
  * Enable test mode that returns an 8 bit counter instead of the samples.
@@ -281,7 +281,7 @@ RTLSDR_API uint32_t rtlsdr_get_sample_rate(rtlsdr_dev_t *dev);
  * \param test mode, 1 means enabled, 0 disabled
  * \return 0 on success
  */
-RTLSDR_API int rtlsdr_set_testmode(rtlsdr_dev_t *dev, int on);
++++ RTLSDR_API int rtlsdr_set_testmode(rtlsdr_dev_t *dev, int on);
 
 /*!
  * Enable or disable the internal digital AGC of the RTL2832.
@@ -290,7 +290,7 @@ RTLSDR_API int rtlsdr_set_testmode(rtlsdr_dev_t *dev, int on);
  * \param digital AGC mode, 1 means enabled, 0 disabled
  * \return 0 on success
  */
-RTLSDR_API int rtlsdr_set_agc_mode(rtlsdr_dev_t *dev, int on);
++++ RTLSDR_API int rtlsdr_set_agc_mode(rtlsdr_dev_t *dev, int on);
 
 /*!
  * Enable or disable the direct sampling mode. When enabled, the IF mode
@@ -302,7 +302,7 @@ RTLSDR_API int rtlsdr_set_agc_mode(rtlsdr_dev_t *dev, int on);
  * \param on 0 means disabled, 1 I-ADC input enabled, 2 Q-ADC input enabled
  * \return 0 on success
  */
-RTLSDR_API int rtlsdr_set_direct_sampling(rtlsdr_dev_t *dev, int on);
++++ RTLSDR_API int rtlsdr_set_direct_sampling(rtlsdr_dev_t *dev, int on);
 
 /*!
  * Get state of the direct sampling mode
@@ -311,7 +311,7 @@ RTLSDR_API int rtlsdr_set_direct_sampling(rtlsdr_dev_t *dev, int on);
  * \return -1 on error, 0 means disabled, 1 I-ADC input enabled
  *	    2 Q-ADC input enabled
  */
-RTLSDR_API int rtlsdr_get_direct_sampling(rtlsdr_dev_t *dev);
++++ RTLSDR_API int rtlsdr_get_direct_sampling(rtlsdr_dev_t *dev);
 
 /*!
  * Enable or disable offset tuning for zero-IF tuners, which allows to avoid
@@ -329,13 +329,13 @@ RTLSDR_API int rtlsdr_set_offset_tuning(rtlsdr_dev_t *dev, int on);
  * \param dev the device handle given by rtlsdr_open()
  * \return -1 on error, 0 means disabled, 1 enabled
  */
-RTLSDR_API int rtlsdr_get_offset_tuning(rtlsdr_dev_t *dev);
++++ RTLSDR_API int rtlsdr_get_offset_tuning(rtlsdr_dev_t *dev);
 
 /* streaming functions */
 
-RTLSDR_API int rtlsdr_reset_buffer(rtlsdr_dev_t *dev);
++++ RTLSDR_API int rtlsdr_reset_buffer(rtlsdr_dev_t *dev);
 
-RTLSDR_API int rtlsdr_read_sync(rtlsdr_dev_t *dev, void *buf, int len, int *n_read);
++++ RTLSDR_API int rtlsdr_read_sync(rtlsdr_dev_t *dev, void *buf, int len, int *n_read);
 
 typedef void(*rtlsdr_read_async_cb_t)(unsigned char *buf, uint32_t len, void *ctx);
 
